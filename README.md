@@ -1,6 +1,8 @@
 # Estudos
 Esse repositório contem arquivos em escritos markdown que contém anotações criadas por mim em algum momento de estudo.
 
+---
+
 ## Diretórios
 | Diretorio | Descrição |
 | --- | --- |
