@@ -1,0 +1,13 @@
+- name: ubuntu
+  cpus: 1
+  memory: 1024
+  hostname: ubuntu.whoops.com.br
+  ip: 192.168.99.10
+  system: ubuntu/bionic64
+
+- name: centos
+  cpus: 1
+  memory: 1024
+  hostname: centos.whoops.com.br
+  ip: 192.168.99.11
+  system: centos/7
