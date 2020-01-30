@@ -1,0 +1,4 @@
+.hosts.*
+LPI2/lab/.vagrant/
+LPI2/lab/*.log
+
