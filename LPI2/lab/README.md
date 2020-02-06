@@ -18,4 +18,5 @@ Para iniciar o laboratório, é necessário acessar o diretório `lab` e então 
 ``` bash
 cd lab
 vagrant up
+vagrant ssh ubuntu|centos
 ```
