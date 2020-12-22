@@ -1,4 +1,4 @@
-# AWS Certified Cloud Practitioner(CLF-C01)
+# AWS Certified Cloud Practitioner (CLF-C01)
 
 São 65 questões do tipo "**Multiple choice**", que possui somente uma alternativa correta e "**Multiple response**", onde existem duas ou mais alternativas corretas. Dentro da prova existem questões onde **não** irão contar pontos para a pontuação final da prova.
 
@@ -16,7 +16,7 @@ Para ser aprovado é necessário acertar 70% da prova.
 
 ## Links úteis
 
-* Curso da própria AWS para a certificação - [AWS Cloud Practitioner Essentials (Second Edition)](https://www.aws.training/Details/Curriculum?id=27076)
+* Curso da própria AWS para a certificação - [AWS Cloud Practitioner Essentials (Second Edition)](https://www.aws.training/Details/eLearning?id=60697)
 * [AWS – Dicas para certificação AWS Certified Cloud Practitioner](https://www.jlcp.com.br/aws-dicas-para-certificacao-aws-certified-cloud-practitioner/)
 * [AWS Well-Architected Framework](https://d1.awsstatic.com/whitepapers/architecture/AWS_Well-Architected_Framework.pdf)
 
