@@ -1,0 +1,12 @@
+# IAM Role to be granted ECR permissions
+data "aws_iam_role" "ecr" {
+  name = "ecr-iam"
+}
+
+module "ecr" {
+  source                 = "git::https://github.com/cloudposse/terraform-aws-ecr.git?ref=tags/0.29.1"
+  namespace              = "eg"
+  stage                  = "test"
+  name                   = "Batata"
+  principals_full_access = [data.aws_iam_role.ecr.arn]
+}

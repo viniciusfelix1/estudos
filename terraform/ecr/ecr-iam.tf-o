@@ -1,0 +1,39 @@
+      module "iam-role" {
+      source = "git::https://github.com/clouddrove/terraform-aws-iam-role.git?ref=tags/0.12.3"
+
+      name               = "iam"
+      application        = "ECR"
+      environment        = "test"
+      label_order        = ["environment", "application", "name"]
+      assume_role_policy = data.aws_iam_policy_document.default.json
+
+      policy_enabled = true
+      policy         = data.aws_iam_policy_document.iam-policy.json
+    }
+
+    data "aws_iam_policy_document" "default" {
+      statement {
+      effect  = "Allow"
+      actions = [
+      "sts:AssumeRole",
+      "ecr:*"
+      ]
+      principals {
+      type        = "Service"
+      identifiers = ["ec2.amazonaws.com"]
+      }
+      }
+    }
+
+      data "aws_iam_policy_document" "iam-policy" {
+      statement {
+      actions = [
+      "ssm:UpdateInstanceInformation",
+      "ssmmessages:CreateControlChannel",
+      "ssmmessages:CreateDataChannel",
+      "ssmmessages:OpenControlChannel",
+      "ssmmessages:OpenDataChannel"    ]
+      effect    = "Allow"
+      resources = ["*"]
+      }
+    }
