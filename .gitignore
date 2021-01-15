@@ -1,4 +1,9 @@
 .hosts.*
 LPI2/lab/.vagrant/
 LPI2/lab/*.log
-
+terraform/credenciais*
+terraform/terraform.tfstate*
+terraform/.terraform*
+terraform/*/terraform.tfstate*
+terraform/*/.terraform*
+terraform/*/crash.log
