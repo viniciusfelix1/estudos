@@ -18,7 +18,7 @@ data "aws_subnet" "get-subnet2" {
 #}
 
 resource "aws_db_subnet_group" "default" {
-  name = "main"
+  name = "teste-vinicius"
   subnet_ids = [data.aws_subnet.get-subnet1.id, data.aws_subnet.get-subnet2.id]
 }
 
@@ -28,17 +28,18 @@ resource "aws_db_instance" "default" {
   engine = var.rds_engine
   engine_version = var.rds_engine_version
   instance_class = var.rds_instance_class
-  name = "teste-vinicius"
-  username = "ballot"
-  password = "ballot123"
+  name = var.rds_name
+  username = var.rds_username
+  password = var.rds_password
 #  parameter_group_name = aws_db_parameter_group.default.name
   db_subnet_group_name = aws_db_subnet_group.default.name
   multi_az = true
+  skip_final_snapshot = true
 }
 
-resource "aws_db_snapshot" "default" {
-  db_instance_identifier = aws_db_instance.default.id
-  db_snapshot_identifier = "db_teste-vinicius"
-}
-
+#resource "aws_db_snapshot" "default" {
+#  db_instance_identifier = aws_db_instance.default.id
+#  db_snapshot_identifier = "db_teste-vinicius"
+#}
+#
 
